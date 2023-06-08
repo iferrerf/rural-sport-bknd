@@ -6,7 +6,7 @@ import Pista from "@/models/Pista";
 export const getPistaByName = async (_id: string): Promise<IPista | null> => {
 
     await db.connect();
-    const pista = await Pista.findOne({ _id }).lean();
+    const pista = await Pista.findById({ _id }).lean();
     await db.disconnect();
 
     if (!pista) {
@@ -36,14 +36,14 @@ export const getPistasByLugar = async (lugar: string): Promise<IPista[]> => {
 
     await db.disconnect();
 
-    const updatePista = pistas.map( pista => {
+    const updatedPista = pistas.map( pista => {
         pista.images = pista.images.map( img => {
             return img.includes('http') ? img : `${ process.env.HOST_NAME}products/${img}`;
         });
         return pista;
     }); 
 
-    return updatePista;
+    return updatedPista;
 
 }
 
