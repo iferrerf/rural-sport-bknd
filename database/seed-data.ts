@@ -48,8 +48,8 @@ export const initialData: SeedData = {
         nombre: 'Pista de tenis',
         lugar: 'Cantavieja',
         images: [
-            'https://www.sportbs.es/wp-content/uploads/2020/10/10-1.jpeg',
-            'https://www.sportbs.es/wp-content/uploads/2020/10/7-3.jpeg',
+            'https://pavimentalia.com/images/web//galerias2920200123161943.jpg',
+            'https://playtenis.com/wp-content/uploads/2021/02/poolplay_foto_49.jpg',
         ],
         descripcion: 'Situada junto al recinto escolar, compartiendo acceso con la pista de frontón. Ubicada a un paso de la piscina municipal. Se han hecho arreglos de mejora de las instalaciones.',
         temporada: 'Todo el año',
