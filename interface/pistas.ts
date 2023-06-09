@@ -7,4 +7,5 @@ export interface IPista {
     horario: string;
     añoConstruccion: string;
     estado: string;
+    descripcion: string;
 }

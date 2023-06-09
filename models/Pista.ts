@@ -9,6 +9,7 @@ const pistaSchema = new Schema({
     images: [{ type: String, required: true, default: '' }],
     añoConstruccion: { type: String, required: true, default: '' },
     estado: { type: String, required: true, default: 'Bueno' },
+    descripcion:  { type: String, required: true, default: '' },
 
 }, {
     timestamps: true,
