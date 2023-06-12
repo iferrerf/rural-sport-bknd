@@ -41,10 +41,12 @@ const getPistas = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
 const createPista = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
 
     const pista = req.body as IPista;
-    
+
+    console.log({pista});
+
     try {
-        await db.connect(); 
-        const newPista = new Pista({ pista });
+        await db.connect();
+        const newPista = new Pista( pista );
         await newPista.save();
         await db.disconnect();
 
