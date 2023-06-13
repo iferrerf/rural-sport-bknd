@@ -23,6 +23,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse<Data>)
 
 const deletePista = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
     const { id } = req.query;
+
+    if (!isValidObjectId(id)) {
+        return res.status(404).json({ message: 'El id del producto no es válido' });
+    }
+
     try {
         await db.connect();
         const pista = await Pista.findByIdAndDelete(id);
