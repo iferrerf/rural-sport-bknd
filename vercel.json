@@ -2,10 +2,11 @@
     "version": 2,
     "routes": [
       {
-        "src": "/api/pistas/:id",
+        "src": "https://rural-sport-bknd.vercel.app/api/pistas/:id",
         "methods": ["DELETE"],
         "headers": {
-          "Access-Control-Allow-Origin": "*"
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Methods": "DELETE"
         }
       }
     ]
